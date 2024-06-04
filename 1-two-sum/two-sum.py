@@ -11,3 +11,4 @@ class Solution(object):
             if target - nums[i] in hash_map:
                 return [hash_map[target-nums[i]], i]
             hash_map[nums[i]] = i
+
