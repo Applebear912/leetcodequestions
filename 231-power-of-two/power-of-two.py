@@ -4,11 +4,14 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
+        # Handle edge cases for negative numbers and zero
+        if n <= 0:
+            return False
+        # Base case: 1 is a power of two (2^0)
         if n == 1:
             return True
-        x = 1
-        while x < n:
-            x *= 2
-            if x == n:
-                return True
-        return False
+        # Immediate False: If n is not divisible by 2, it's not a power of two
+        if n % 2 != 0:
+            return False
+        # Recursive case: divide n by 2 and check again
+        return self.isPowerOfTwo(n // 2)
