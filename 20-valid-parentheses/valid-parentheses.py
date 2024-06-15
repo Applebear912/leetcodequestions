@@ -1,4 +1,4 @@
-class Stack:
+class Stack(object):
     def __init__(self):
         self.stack = []
         self.count = 0
@@ -11,8 +11,6 @@ class Stack:
         self.count += 1
 
     def pop(self):
-        if self.count == 0:
-            return 'stack is empty'
         self.count -= 1
         return self.stack[self.count]
 
