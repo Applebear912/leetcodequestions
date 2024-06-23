@@ -12,10 +12,14 @@ class Solution(object):
         """
         head = ListNode()
         current = head
+        # initiate empty head to start
 
         while list1 and list2:
+            # when one list reach to the end there is no need to continue the loop
             if list1.val < list2.val:
+                # small one goes into the new list, having current head pointing to it
                 current.next = list1
+                # 
                 list1 = list1.next
             else:
                 current.next = list2
