@@ -7,10 +7,10 @@ class Solution:
                 res.append(c)
                 count += 1
             elif c == ')' and count > 0:
-                # only append ) when there is enough ( to pair with)
                 res.append(c)
                 count -= 1
             elif c != ')':
+                # avoiding the case when c == ')' but count is <= 0
                 res.append(c)
         
         filtered = []
