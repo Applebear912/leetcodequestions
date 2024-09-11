@@ -1,11 +1,6 @@
-class Solution(object):
-    def lengthOfLongestSubstring(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
-        # sliding windows
-
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        # sliding window
         longest = 0
         substring = set()
         l = 0
@@ -16,4 +11,3 @@ class Solution(object):
             substring.add(s[r])
             longest = max(longest, len(substring))
         return longest
-        
